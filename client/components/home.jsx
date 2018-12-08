@@ -1,36 +1,35 @@
 import React, { useState } from 'react';
 import WorkoutList from './workout-list.jsx';
-import WorkoutCategory from './workout-category.jsx'; 
+import WorkoutCategory from './workout-category.jsx';
+import '../styles/home.css';
 
-const App = (props) => {
+const App = () => {
   const [count, setCount] = useState(0);
   return (
-    <div>
+    <div id="home">
       <h1>{count}</h1>
-      <WorkoutCategory
-        title="Running"
-        categories={['Marathon', 'Half Marathon', '10km', '5km']}
-        img=""
-        loadWorkouts={setCount}
-      />
-      <WorkoutCategory
-        title="Cycling"
-        categories={['Road', 'Mountrain', 'trial']}
-        img=""
-        loadWorkouts={setCount}
-      />
-      <WorkoutCategory
-        title="Triathlon"
-        categories={['Iron Man', 'Half Iron Man', 'Olympic', 'Sprint']}
-        img=""
-        loadWorkouts={setCount}
-      />
-      <WorkoutCategory
-        title="Other"
-        categories={['Swimming', 'Fitness', 'Obstacle', 'Duathlon']}
-        img=""
-        loadWorkouts={setCount}
-      />
+      <div id="workouts">
+        <WorkoutCategory
+          category="Running"
+          subcategories={['Marathon', 'Half Marathon', '10km', '5km']}
+          loadWorkouts={setCount}
+        />
+        <WorkoutCategory
+          category="Cycling"
+          subcategories={['Road', 'Mountrain', 'Trial']}
+          loadWorkouts={setCount}
+        />
+        <WorkoutCategory
+          category="Triathlon"
+          subcategories={['Iron Man', 'Half Iron Man', 'Olympic', 'Sprint']}
+          loadWorkouts={setCount}
+        />
+        <WorkoutCategory
+          category="Other"
+          subcategories={['Swimming', 'Fitness', 'Obstacle', 'Duathlon']}
+          loadWorkouts={setCount}
+        />
+      </div>
     </div>
   );
 };
