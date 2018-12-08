@@ -1,0 +1,23 @@
+.workout-category {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  /* background-image: url('../../public/assets/temp.jpg') */
+}
+
+.workout-subcategory {
+  border: solid 1px black;
+  border-radius: 5px;
+  width: 40%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.workout-category-title {
+  color: white;
+
+}
