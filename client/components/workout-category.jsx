@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/workout-categories.css';
 
-const WorkoutCategory = ({ category, subcategories, img, loadWorkouts, count }) => {
-  const [showSubCategories, toggleSubcategories] = useState(false)
+const WorkoutCategory = ({ category, subcategories, fetchWorkouts }) => {
+  const [showSubCategories, toggleSubcategories] = useState(false);
 
   function showCategoryInfo() {
     // if mouse is over category, show subcategories
@@ -12,6 +12,7 @@ const WorkoutCategory = ({ category, subcategories, img, loadWorkouts, count }) 
           key={subcategory}
           type="button"
           className="workout-subcategory"
+          onClick={() => fetchWorkouts(subcategory)}
         >
           {subcategory}
         </button>

@@ -4,30 +4,45 @@ import WorkoutCategory from './workout-category.jsx';
 import '../styles/home.css';
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [workouts, loadWorkouts] = useState([]);
+  const fetchWorkouts = (subcategory) => {
+    console.log('subcategory', subcategory)
+    fetch(`/workout/${subcategory}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject(new Error('Unable to fetch workouts'));
+      })
+      .then((fetchedWorkouts) => {
+        loadWorkouts(fetchedWorkouts);
+      })
+      .catch(() => console.error('Unable to fetch people'));
+  };
+
   return (
     <div id="home">
-      <h1>{count}</h1>
+      <h1>Find A Workout</h1>
       <div id="workouts">
         <WorkoutCategory
           category="Running"
           subcategories={['Marathon', 'Half Marathon', '10km', '5km']}
-          loadWorkouts={setCount}
+          fetchWorkouts={fetchWorkouts}
         />
         <WorkoutCategory
           category="Cycling"
           subcategories={['Road', 'Mountrain', 'Trial']}
-          loadWorkouts={setCount}
+          fetchWorkouts={fetchWorkouts}
         />
         <WorkoutCategory
           category="Triathlon"
           subcategories={['Iron Man', 'Half Iron Man', 'Olympic', 'Sprint']}
-          loadWorkouts={setCount}
+          fetchWorkouts={fetchWorkouts}
         />
         <WorkoutCategory
           category="Other"
           subcategories={['Swimming', 'Fitness', 'Obstacle', 'Duathlon']}
-          loadWorkouts={setCount}
+          fetchWorkouts={fetchWorkouts}
         />
       </div>
     </div>
