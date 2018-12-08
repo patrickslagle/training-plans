@@ -3,21 +3,33 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 10px;
   /* background-image: url('../../public/assets/temp.jpg') */
 }
 
+.workout-category:hover{
+  opacity: 90%;
+  background-blend-mode: darken;
+  background-color: rgb(50, 50, 50);
+}
+
 .workout-subcategory {
-  border: solid 1px black;
+  border: solid 2px white;
+  color: white; 
   border-radius: 5px;
   width: 40%;
   padding: 5px;
   margin: 5px;
+  background-color: rgb(50, 50, 50);
+}
+
+.workout-subcategory:hover {
+  background-color: white;
+  color: rgb(50, 50, 50);
 }
 
 .workout-category-title {
   color: white;
-
 }
