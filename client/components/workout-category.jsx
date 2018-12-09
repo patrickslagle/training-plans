@@ -24,7 +24,7 @@ const WorkoutCategory = ({ category, subcategories, fetchWorkouts }) => {
 
   return (
     <div
-      className="workout-category"
+      className={`workout-category ${category.toLowerCase()}`}
       onMouseEnter={() => toggleSubcategories(true)}
       onMouseLeave={() => toggleSubcategories(false)}
     >

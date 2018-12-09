@@ -22,7 +22,9 @@ const Home = () => {
 
   return (
     <div id="home">
-      <h1>Find A Workout</h1>
+      <div id="banner">
+        <h1 id="banner-text">Training Plans</h1>
+      </div>
       <div id="workouts">
         <WorkoutCategory
           category="Running"
