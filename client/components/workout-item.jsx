@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import WorkoutPage from './workout-page.jsx';
+import changeAppContext from './change-app-context.jsx';
 
-const WorkoutItem = ({ workout, changeApp }) => {
+const WorkoutItem = ({ workout }) => {
   const { icon, title, weeksDuration, price } = workout;
+  const changeApp = useContext(changeAppContext);
   return (
     <button
       className="workout-item"
@@ -14,7 +16,7 @@ const WorkoutItem = ({ workout, changeApp }) => {
       <p>{weeksDuration}</p>
       <p>{price}</p>
     </button>
-  )
+  );
 };
 
 export default WorkoutItem;
