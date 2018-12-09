@@ -1,8 +1,9 @@
 import React from 'react';
 // look to import https://github.com/cure53/DOMPurify
 // or lodash escape https://lodash.com/docs#escape
+import sanitizeHtml from 'sanitize-html';
 
-const WorkoutPage = ({workout}) => {
+const WorkoutPage = ({ workout }) => {
   const {
     title,
     icon,
@@ -20,9 +21,9 @@ const WorkoutPage = ({workout}) => {
       <p>{workoutCount}</p>
       <p>{weeksDuration}</p>
       <p>{authorFullName}</p>
-      <div dangerouslySetInnerHTML={{__html: description }} />
+      <div dangerouslySetInnerHTML={{__html: sanitizeHtml(description) }} />
     </div>
-  )
+  );
 };
 
 export default WorkoutPage;
