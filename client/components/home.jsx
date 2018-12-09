@@ -4,7 +4,7 @@ import WorkoutCategory from './workout-category.jsx';
 import '../styles/home.css';
 
 const Home = ({ changeApp }) => {
-  const [workouts, loadWorkouts] = useState(<WorkoutList workouts={[]} />);
+  const [workouts, loadWorkouts] = useState([]);
   const fetchWorkouts = (subcategory) => {
     fetch(`/workout/${subcategory}`)
       .then((response) => {
@@ -15,11 +15,11 @@ const Home = ({ changeApp }) => {
       })
       .then((fetchedWorkouts) => {
         console.log(fetchedWorkouts)
-        loadWorkouts(<WorkoutList changeApp={changeApp} workouts={fetchedWorkouts} />);
+        loadWorkouts(fetchedWorkouts);
       })
       .catch(() => console.error('Unable to fetch people'));
   };
-
+  console.log('workouts', workouts)
   return (
     <div id="home">
       <h1>Find A Workout</h1>
@@ -44,7 +44,12 @@ const Home = ({ changeApp }) => {
           subcategories={['Swimming', 'Fitness', 'Obstacle', 'Duathlon']}
           fetchWorkouts={fetchWorkouts}
         />
-        {workouts}
+        {workouts.length > 0 && (
+          <WorkoutList
+            changeApp={changeApp}
+            workouts={workouts}
+          />
+        )}
       </div>
     </div>
   );

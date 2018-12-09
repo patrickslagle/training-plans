@@ -15,7 +15,7 @@ const WorkoutList = ({ workouts, changeApp }) => {
 
   return (
     <div>
-      {workouts.length && <h2>Select Workout</h2>}
+      <h2>Select Workout</h2>
       <div id="workout-plans">
         {workoutItems}
       </div>
