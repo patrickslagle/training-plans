@@ -31,7 +31,7 @@ const Home = ({ changeApp }) => {
         />
         <WorkoutCategory
           category="Cycling"
-          subcategories={['Road', 'Mountrain', 'Trial']}
+          subcategories={['Road', 'Mountain', 'Trial']}
           fetchWorkouts={fetchWorkouts}
         />
         <WorkoutCategory
