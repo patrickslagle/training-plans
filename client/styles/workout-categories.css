@@ -5,14 +5,14 @@
   flex-wrap: wrap;
   width: 350px;
   height: 250px;
-  margin: 10px;
+  margin: 5px;
   /* background-image: url('../../public/assets/temp.jpg') */
 }
 
 .workout-category:hover{
   opacity: 90%;
   background-blend-mode: darken;
-  background-color: rgb(50, 50, 50);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .workout-subcategory {
@@ -31,5 +31,6 @@
 }
 
 .workout-category-title {
+  /* color: rgb(226, 174, 63); */
   color: white;
 }
