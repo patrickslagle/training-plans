@@ -26,26 +26,30 @@ const Home = () => {
         <h1 id="banner-text">Training Plans</h1>
       </div>
       <div id="workouts">
-        <WorkoutCategory
-          category="Running"
-          subcategories={['Marathon', 'Half Marathon', '10km', '5km']}
-          fetchWorkouts={fetchWorkouts}
-        />
-        <WorkoutCategory
-          category="Cycling"
-          subcategories={['Road', 'Mountain', 'Trial']}
-          fetchWorkouts={fetchWorkouts}
-        />
-        <WorkoutCategory
-          category="Triathlon"
-          subcategories={['Iron Man', 'Half Iron Man', 'Olympic', 'Sprint']}
-          fetchWorkouts={fetchWorkouts}
-        />
-        <WorkoutCategory
-          category="Other"
-          subcategories={['Swimming', 'Fitness', 'Obstacle', 'Duathlon']}
-          fetchWorkouts={fetchWorkouts}
-        />
+        <div id="row-1">
+          <WorkoutCategory
+            category="Running"
+            subcategories={['Marathon', 'Half Marathon', '10km', '5km']}
+            fetchWorkouts={fetchWorkouts}
+          />
+          <WorkoutCategory
+            category="Cycling"
+            subcategories={['Road', 'Mountain', 'Trial']}
+            fetchWorkouts={fetchWorkouts}
+          />
+        </div>
+        <div id="row-2">
+          <WorkoutCategory
+            category="Triathlon"
+            subcategories={['Iron Man', 'Half Iron Man', 'Olympic', 'Sprint']}
+            fetchWorkouts={fetchWorkouts}
+          />
+          <WorkoutCategory
+            category="Other"
+            subcategories={['Swimming', 'Fitness', 'Obstacle', 'Duathlon']}
+            fetchWorkouts={fetchWorkouts}
+          />
+        </div>
         {workouts.length > 0 && <WorkoutList workouts={workouts} />}
       </div>
     </div>
