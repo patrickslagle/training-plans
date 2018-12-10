@@ -157,3 +157,32 @@ exports[`WorkoutCategory component renders properly 1`] = `
   </h1>
 </div>
 `;
+
+exports[`WorkoutItem component renders properly 1`] = `
+<button
+  className="workout-item"
+  onClick={[Function]}
+  type="button"
+>
+  <img
+    alt="workout type"
+    className="icon"
+    src="https://assets.trainingpeaks.com/images/icons/training-plans/half-marathon.svg"
+  />
+  <p
+    className="title"
+  >
+    HALFMARATHON Training Plan (INTERMEDIATE 24Wk Plan, Sat Race) Start Any Monday Power Based
+  </p>
+  <p
+    className="weeks-duration"
+  >
+    24
+  </p>
+  <p
+    className="price"
+  >
+    207
+  </p>
+</button>
+`;

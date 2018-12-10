@@ -39,4 +39,19 @@ test('WorkoutCategory component renders properly', () => {
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+});
+
+test('WorkoutItem component renders properly', () => {
+  const component = renderer.create(
+    <WorkoutItem
+      workout={{
+        icon: 'https://assets.trainingpeaks.com/images/icons/training-plans/half-marathon.svg',
+        title: 'HALFMARATHON Training Plan (INTERMEDIATE 24Wk Plan, Sat Race) Start Any Monday Power Based',
+        weeksDuration: 24,
+        price: 207,
+      }}
+    />
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
