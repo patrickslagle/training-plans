@@ -71,3 +71,75 @@ exports[`App component renders properly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Home component renders properly 1`] = `
+<div
+  id="home"
+>
+  <div
+    id="banner"
+  >
+    <h1
+      id="banner-text"
+    >
+      Training Plans
+    </h1>
+  </div>
+  <div
+    id="workouts"
+  >
+    <div
+      id="row-1"
+    >
+      <div
+        className="workout-category running"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <h1
+          className="workout-category-title"
+        >
+          Running
+        </h1>
+      </div>
+      <div
+        className="workout-category cycling"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <h1
+          className="workout-category-title"
+        >
+          Cycling
+        </h1>
+      </div>
+    </div>
+    <div
+      id="row-2"
+    >
+      <div
+        className="workout-category triathlon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <h1
+          className="workout-category-title"
+        >
+          Triathlon
+        </h1>
+      </div>
+      <div
+        className="workout-category other"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <h1
+          className="workout-category-title"
+        >
+          Other
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+`;

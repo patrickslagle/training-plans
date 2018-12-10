@@ -15,7 +15,15 @@ configure({ adapter: new Adapter() });
 test('App component renders properly', () => {
   const component = renderer.create(
     <App />
-  )
-  let tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+})
+
+test('Home component renders properly', () => {
+  const component = renderer.create(
+    <Home />
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 })
