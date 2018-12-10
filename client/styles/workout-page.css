@@ -1,12 +1,12 @@
 .workout-page {
   height: 100vh; 
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
   background-blend-mode: overlay;
 }
 
 #workout-title {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 #workout-info {
@@ -22,7 +22,22 @@
 
 #workout-description {
   width: 80%;
-  border: 1px solid gray;
   padding: 10px; 
   justify-content: center;
+}
+
+#back-home {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+#back-home:hover{
+  cursor: pointer;
+}
+
+#back-arrow {
+  height: 30px;
 }
