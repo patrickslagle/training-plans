@@ -6,7 +6,6 @@
   width: 400px;
   height: 300px;
   margin: 5px;
-  /* background-image: url('../../public/assets/temp.jpg') */
 }
 
 .workout-category:hover{
@@ -31,6 +30,5 @@
 }
 
 .workout-category-title {
-  /* color: rgb(226, 174, 63); */
   color: white;
 }

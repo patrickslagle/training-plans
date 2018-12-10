@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import sanitizeHtml from 'sanitize-html';
-import ChangeAppContext from './change-app-context.jsx';
 import Home from './home.jsx';
+import ChangeAppContext from './change-app-context.jsx';
 import '../styles/workout-page.css';
 
 const WorkoutPage = ({ workout }) => {
