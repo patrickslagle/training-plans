@@ -10,12 +10,12 @@ Create a .env file with the URL to access your Elastic Search
 
 For developing on client and server files:
 ```
-npm run dev
+yarn run dev
 ```
 
 For Production:
 ```
-npm run webpack
+yarn run webpack
 ```
 
 ## Author
