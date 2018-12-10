@@ -186,3 +186,32 @@ exports[`WorkoutItem component renders properly 1`] = `
   </p>
 </button>
 `;
+
+exports[`WorkoutList component renders properly 1`] = `
+<div
+  id="workout-table"
+>
+  <div
+    id="workout-table-header"
+  >
+    <p
+      className="icon"
+    />
+    <p
+      className="title"
+    >
+      Title
+    </p>
+    <p
+      className="weeks-duration"
+    >
+      Weeks
+    </p>
+    <p
+      className="price"
+    >
+      Price
+    </p>
+  </div>
+</div>
+`;

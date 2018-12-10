@@ -55,3 +55,17 @@ test('WorkoutItem component renders properly', () => {
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('WorkoutList component renders properly', () => {
+  const component = renderer.create(
+    <WorkoutList
+      workout={{
+        _source: {
+          sku: 123,
+        },
+      }}
+    />
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
