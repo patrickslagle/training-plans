@@ -1,7 +1,6 @@
 import React from 'react';
-// look to import https://github.com/cure53/DOMPurify
-// or lodash escape https://lodash.com/docs#escape
 import sanitizeHtml from 'sanitize-html';
+import '../styles/workout-page.css';
 
 const WorkoutPage = ({ workout }) => {
   const {
@@ -12,16 +11,27 @@ const WorkoutPage = ({ workout }) => {
     workoutCount,
     weeksDuration,
     authorFullName,
+    category,
   } = workout;
   return (
-    <div>
-      <p>{title}</p>
-      <p>{icon}</p>
-      <p>{price}</p>
-      <p>{workoutCount}</p>
-      <p>{weeksDuration}</p>
-      <p>{authorFullName}</p>
-      <div dangerouslySetInnerHTML={{__html: sanitizeHtml(description) }} />
+    <div className={`workout-page ${category}`}>
+      <h1 id="workout-title">{title}</h1>
+      <div id="workout-info">
+        <img className="icon" src={icon} alt="workout type" />
+        <div id="workout-details">
+          <p>{`price: ${price}`}</p>
+          <p>{`Workout Count: ${workoutCount}`}</p>
+          <p>{`Week Duration: ${weeksDuration}`}</p>
+          <p>{`Author: ${authorFullName}`}</p>
+        </div>
+      </div>
+      <div id="workout-description-container">
+        <h3>Workout Description</h3>
+        <div
+          id="workout-description"
+          dangerouslySetInnerHTML={{__html: sanitizeHtml(description) }} 
+        />
+      </div>
     </div>
   );
 };
