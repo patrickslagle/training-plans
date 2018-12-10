@@ -2,6 +2,8 @@
 
 ## How to Use
 
+create a .env file with the URL to access your Elastic Search
+
 For developing on client and server files:
 ```
 npm run dev
