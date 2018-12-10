@@ -1,8 +1,12 @@
 # Training Plans
 
+## Description
+
+Uses React Hooks to display different workouts
+
 ## How to Use
 
-create a .env file with the URL to access your Elastic Search
+Create a .env file with the URL to access your Elastic Search
 
 For developing on client and server files:
 ```
