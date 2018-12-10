@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import WorkoutItem from './workout-item.jsx';
 import '../styles/workout-items.css';
 
@@ -28,3 +29,7 @@ const WorkoutList = ({ workouts }) => {
 };
 
 export default WorkoutList;
+
+WorkoutList.propTypes = {
+  workouts: PropTypes.array.isRequired,
+};

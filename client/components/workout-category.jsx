@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/workout-categories.css';
 
 const WorkoutCategory = ({ category, subcategories, fetchWorkouts }) => {
@@ -35,3 +36,9 @@ const WorkoutCategory = ({ category, subcategories, fetchWorkouts }) => {
 };
 
 export default WorkoutCategory;
+
+WorkoutCategory.propTypes = {
+  category: PropTypes.string.isRequired,
+  subcategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  fetchWorkouts: PropTypes.func.isRequired,
+};

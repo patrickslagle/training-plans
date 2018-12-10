@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import WorkoutPage from './workout-page.jsx';
 import changeAppContext from './change-app-context.jsx';
 import '../styles/workout-items.css';
@@ -21,3 +22,7 @@ const WorkoutItem = ({ workout }) => {
 };
 
 export default WorkoutItem;
+
+WorkoutItem.propTypes = {
+  workout: PropTypes.object.isRequired,
+};

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import sanitizeHtml from 'sanitize-html';
+import PropTypes from 'prop-types';
 import Home from './home.jsx';
 import ChangeAppContext from './change-app-context.jsx';
 import '../styles/workout-page.css';
@@ -52,3 +53,7 @@ const WorkoutPage = ({ workout }) => {
 };
 
 export default WorkoutPage;
+
+WorkoutPage.propTypes = {
+  workout: PropTypes.object.isRequired,
+};
