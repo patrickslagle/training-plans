@@ -143,3 +143,17 @@ exports[`Home component renders properly 1`] = `
   </div>
 </div>
 `;
+
+exports[`WorkoutCategory component renders properly 1`] = `
+<div
+  className="workout-category running"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <h1
+    className="workout-category-title"
+  >
+    running
+  </h1>
+</div>
+`;

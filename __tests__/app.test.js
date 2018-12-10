@@ -18,11 +18,24 @@ test('App component renders properly', () => {
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+});
 
 test('Home component renders properly', () => {
   const component = renderer.create(
     <Home />
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('WorkoutCategory component renders properly', () => {
+  const fetchWorkouts = jest.fn();
+  const component = renderer.create(
+    <WorkoutCategory 
+      category='running'
+      subcategories={['Marathon', 'Half Marathon', '10km', '5km']} 
+      fetchWorkouts={fetchWorkouts}
+    />
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
