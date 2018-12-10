@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import WorkoutPage from './workout-page.jsx';
 import changeAppContext from './change-app-context.jsx';
+import '../styles/workout-items.css';
 
 const WorkoutItem = ({ workout }) => {
   const { icon, title, weeksDuration, price } = workout;
@@ -11,10 +12,10 @@ const WorkoutItem = ({ workout }) => {
       onClick={() => changeApp(<WorkoutPage workout={workout} />)}
       type="button"
     >
-      <img src={icon} alt="workout type" />
-      <p>{title}</p>
-      <p>{weeksDuration}</p>
-      <p>{price}</p>
+      <img className="icon" src={icon} alt="workout type" />
+      <p className="title">{title}</p>
+      <p className="weeks-duration">{weeksDuration}</p>
+      <p className="price">{price}</p>
     </button>
   );
 };

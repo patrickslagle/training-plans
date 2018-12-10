@@ -1,0 +1,50 @@
+#workout-table {
+  display: flex;
+  width: 810px;
+  flex-direction: column;
+  margin: 20px;
+  border: 1px solid darkgray;
+}
+
+#workout-table-header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid gray; 
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(25, 25, 25)
+}
+
+.workout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  background-color: white;
+  color: rgb(50,50,50);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.workout-item:hover {
+  color: rgb(50,50,50);
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20%;
+}
+
+.title {
+  width: 40%;
+}
+
+.price {
+  width: 20%;
+}
+
+.weeks-duration {
+  width: 20%;
+}
