@@ -1,6 +1,7 @@
+require('dotenv').config();
 const elasticsearch = require('elasticsearch');
 
-const bonsaiUrl = 'https://HZWEuRamTP:9cSCUsv24HGfgYPKW@training-plans-sandb-435310341.us-east-1.bonsaisearch.net/';
+const bonsaiUrl = process.env.Bonsai_URL;
 const client = new elasticsearch.Client({
   host: bonsaiUrl,
   log: 'trace',
