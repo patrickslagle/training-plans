@@ -4,6 +4,7 @@ import '../styles/workout-items.css';
 
 const WorkoutList = ({ workouts }) => {
   const [workoutItems, updateWorkouts] = useState([]);
+  // upon mount or update, set workoutItems to an array of items to render
   useEffect(() => {
     updateWorkouts(workouts.map(workout => (
       <WorkoutItem

@@ -5,6 +5,8 @@ import '../styles/home.css';
 
 const Home = () => {
   const [workouts, loadWorkouts] = useState([]);
+
+  // fetch several workouts from the subcategory selected
   const fetchWorkouts = (subcategory) => {
     fetch(`/workout/${subcategory}`)
       .then((response) => {
@@ -14,10 +16,10 @@ const Home = () => {
         return Promise.reject(new Error('Unable to fetch workouts'));
       })
       .then((fetchedWorkouts) => {
-        console.log(fetchedWorkouts)
+        // update workouts with an array of workouts matching the subcategory
         loadWorkouts(fetchedWorkouts);
       })
-      .catch(() => console.error('Unable to fetch people'));
+      .catch(() => console.error('Unable to fetch workouts'));
   };
 
   return (

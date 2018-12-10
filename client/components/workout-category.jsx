@@ -4,6 +4,7 @@ import '../styles/workout-categories.css';
 const WorkoutCategory = ({ category, subcategories, fetchWorkouts }) => {
   const [showSubCategories, toggleSubcategories] = useState(false);
 
+  // dynamically shows category title or subcategories based on mouse over
   function showCategoryInfo() {
     // if mouse is over category, show subcategories
     if (showSubCategories) {
@@ -30,7 +31,7 @@ const WorkoutCategory = ({ category, subcategories, fetchWorkouts }) => {
     >
       {showCategoryInfo()}
     </div>
-  )
+  );
 };
 
 export default WorkoutCategory;
