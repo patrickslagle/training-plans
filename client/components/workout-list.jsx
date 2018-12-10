@@ -12,7 +12,7 @@ const WorkoutList = ({ workouts }) => {
         workout={workout._source}
       />
     )));
-  });
+  }, []);
 
   return (
     <div id="workout-table">
