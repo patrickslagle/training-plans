@@ -50,3 +50,9 @@
   background-size: 100% 100%; 
   opacity: 99%;
 }
+
+.other {
+  background-image: url('./assets/other.jpg');
+  background-size: 100% 100%; 
+  opacity: 99%;
+}
