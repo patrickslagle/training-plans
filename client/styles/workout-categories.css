@@ -34,7 +34,7 @@
 }
 
 .running {
-  background-image: url('../../public/assets/running.jpg');
+  background-image: url('../assets/running.jpg');
   background-size: 100% 100%; 
   opacity: 99%;
 }
