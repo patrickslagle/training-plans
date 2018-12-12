@@ -1,0 +1,24 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 0px;
+  margin: 0px; 
+}
+
+
+.cycling {
+  background-image: url('./assets/cycling.jpg');
+  background-size: 100% 100%; 
+  opacity: 99%;
+}
+
+.triathlon {
+  background-image: url('./assets/triathlon.jpg');
+  background-size: 100% 100%; 
+  opacity: 99%;
+}
+
+.other {
+  background-image: url('./assets/other.jpg');
+  background-size: 100% 100%; 
+  opacity: 99%;
+}
