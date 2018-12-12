@@ -1,7 +1,7 @@
 {
-  "name": "boiler-plate",
+  "name": "training-plans",
   "version": "1.0.0",
-  "description": "React / Node Boiler Plate",
+  "description": "Select a workout training plan",
   "main": "webpack.config.js",
   "scripts": {
     "start": "nodemon ./server/server.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickslagle/react-boilerplate"
+    "url": "git+https://github.com/patrickslagle/training-plans"
   },
   "author": "Patrick Slagle",
   "license": "MIT",
