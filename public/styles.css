@@ -4,13 +4,6 @@
   margin: 0px; 
 }
 
-
-.cycling {
-  background-image: url('./assets/cycling.jpg');
-  background-size: 100% 100%; 
-  opacity: 99%;
-}
-
 .triathlon {
   background-image: url('./assets/triathlon.jpg');
   background-size: 100% 100%; 
